@@ -1,7 +1,7 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
 
-const MainButton = ({ styleButton = 'STYLE_1'}) => {
+const MainButton = ({ styleButton = 'STYLE_1', label}) => {
 
     const getStyle = () => {
         if(styleButton == 'STYLE_2'){
@@ -21,7 +21,7 @@ const MainButton = ({ styleButton = 'STYLE_1'}) => {
 
     return (
         <TouchableOpacity style={[styles.container, getStyle()]}>
-            <Text style={[styles.label, getStyleLabel()]}>Make a Payment</Text>
+            <Text style={[styles.label, getStyleLabel()]}>{label}</Text>
         </TouchableOpacity>
     )
 }

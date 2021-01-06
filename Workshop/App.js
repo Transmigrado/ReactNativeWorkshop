@@ -1,63 +1,44 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react'
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  StatusBar,
-} from 'react-native'
 
-import HeaderNumber from './app/components/HeaderNumber'
-import MainButton from './app/components/MainButton'
+import 'react-native-gesture-handler'
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+import Example1Screen from './app/screens/Example1Screen'
+import Example2Screen from './app/screens/Example2Screen'
+import Example3Screen from './app/screens/Example3Screen'
+import ModalScreen from './app/screens/ModalScreen'
+import Modal2Screen from './app/screens/Modal2Screen'
+
+const HomeStack = createStackNavigator()
+const MainStack = createStackNavigator()
+const ModalStack = createStackNavigator()
+
+
+const HomeStackScreen = () => {
+  return <HomeStack.Navigator>
+  <HomeStack.Screen name="Example1" component={Example1Screen} />
+  <HomeStack.Screen name="Example2" component={Example2Screen} />
+  <HomeStack.Screen name="Example3" component={Example3Screen} />
+</HomeStack.Navigator>
+}
+
+const ModalStackSceen = () => {
+  return <ModalStack.Navigator>
+    <ModalStack.Screen name = "Modal1" component={ModalScreen} />
+    <ModalStack.Screen name = "Modal2" component={Modal2Screen} />
+  </ModalStack.Navigator>
+}
 
 
 const App = () => {
-
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView style={styles.container}>
-        <View style={styles.container}>
-          <View style={styles.cardBlue}>
-              <HeaderNumber
-                title="Policy Number"
-                number={1009820392}
-              />
-              <View style={styles.containerButtons}>
-                <MainButton styleButton="STYLE_2" />
-                <MainButton />
-              </View>
-            
-          </View>
-
-        </View>
-      </SafeAreaView>
-    </>
-  );
-};
-
-
-const styles = StyleSheet.create({
-  container:{
-    flex : 1,
-    paddingHorizontal: 30,
-  },
-  cardBlue:{
-    backgroundColor: '#3F5498',
-    borderRadius: 6,
-  },
-  containerButtons:{
-    padding: 10,
-    flexDirection:'row',
-    justifyContent:'space-between'
-  }
-})
+    <NavigationContainer >
+      <MainStack.Navigator  mode="modal">
+        <MainStack.Screen options={{headerShown: false}} name="Home" component={HomeStackScreen} />
+        <MainStack.Screen options={{headerShown: false}} name="Modal" component={ModalStackSceen} />
+      </MainStack.Navigator>
+    </NavigationContainer>
+  )
+}
 
 export default App

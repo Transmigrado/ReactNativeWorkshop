@@ -2,18 +2,18 @@
 import React from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
-const HeaderNumber = ({ title, number}) => {
+const HeaderNumber = ({ title, number, headerStyle = 'BIG'}) => {
     return (
         <View style={styles.cardHeader}>
-            <Text style={styles.title}>{title}</Text>
-            <Text style={styles.numberDescription}>{number}</Text>
+            <Text style={[styles.title, {fontSize: headerStyle === 'BIG' ? 12 : 9}]}>{title}</Text>
+            <Text style={[styles.numberDescription, {fontSize: headerStyle === 'BIG' ? 20 : 14}]}>{number}</Text>
         </View>
     )
 }
 
 const styles = StyleSheet.create({
     cardHeader:{
-      backgroundColor:'rgba(0,0,0,0.08)',
+      alignSelf:'baseline',
       paddingVertical: 15,
       paddingHorizontal: 20
     },
