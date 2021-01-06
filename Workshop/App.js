@@ -8,18 +8,22 @@ import Example2Screen from './app/screens/Example2Screen'
 import Example3Screen from './app/screens/Example3Screen'
 import ModalScreen from './app/screens/ModalScreen'
 import Modal2Screen from './app/screens/Modal2Screen'
+import ListScreen from './app/screens/ListScreen'
+import ListDetailScreen from './app/screens/ListDetailScreen'
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
 const ModalStack = createStackNavigator()
-
+const ListStack = createStackNavigator()
+const Tabbar = createBottomTabNavigator()
 
 const HomeStackScreen = () => {
-  return <HomeStack.Navigator>
-  <HomeStack.Screen name="Example1" component={Example1Screen} />
-  <HomeStack.Screen name="Example2" component={Example2Screen} />
-  <HomeStack.Screen name="Example3" component={Example3Screen} />
-</HomeStack.Navigator>
+  return <Tabbar.Navigator>
+  <Tabbar.Screen name="HomeList" component={ListStackSceen} />
+  <Tabbar.Screen name="Example2" component={Example2Screen} />
+  <Tabbar.Screen name="Example3" component={Example3Screen} />
+</Tabbar.Navigator>
 }
 
 const ModalStackSceen = () => {
@@ -29,12 +33,20 @@ const ModalStackSceen = () => {
   </ModalStack.Navigator>
 }
 
+const ListStackSceen = () => {
+  return <ListStack.Navigator>
+    <ListStack.Screen name = "List" component={ListScreen} />
+    <ListStack.Screen name = "DetailList" component={ListDetailScreen} />
+  </ListStack.Navigator>
+}
+
 
 const App = () => {
   return (
     <NavigationContainer >
       <MainStack.Navigator  mode="modal">
         <MainStack.Screen options={{headerShown: false}} name="Home" component={HomeStackScreen} />
+        <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />
         <MainStack.Screen options={{headerShown: false}} name="Modal" component={ModalStackSceen} />
       </MainStack.Navigator>
     </NavigationContainer>

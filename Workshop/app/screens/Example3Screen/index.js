@@ -7,7 +7,7 @@ const Example3Screen = ({ navigation }) => {
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
             <Text>Detalle</Text>
             <TouchableOpacity onPress={() => {
-                navigation.navigate('Modal')
+                navigation.navigate('List')
             }}>
                 <Text>Mostrar modal</Text>
             </TouchableOpacity>
