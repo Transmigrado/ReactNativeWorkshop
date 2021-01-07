@@ -11,19 +11,22 @@ import Modal2Screen from './app/screens/Modal2Screen'
 import ListScreen from './app/screens/ListScreen'
 import ListDetailScreen from './app/screens/ListDetailScreen'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import HomeScreen from './app/screens/HomeScreen'
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
 const ModalStack = createStackNavigator()
 const ListStack = createStackNavigator()
 const Tabbar = createBottomTabNavigator()
+const DrawerLayout = createDrawerNavigator()
 
 const HomeStackScreen = () => {
-  return <Tabbar.Navigator>
-  <Tabbar.Screen name="HomeList" component={ListStackSceen} />
-  <Tabbar.Screen name="Example2" component={Example2Screen} />
-  <Tabbar.Screen name="Example3" component={Example3Screen} />
-</Tabbar.Navigator>
+  return <DrawerLayout.Navigator>
+  <DrawerLayout.Screen name="HomeList" component={HomeScreen} />
+  <DrawerLayout.Screen name="Example2" component={Example2Screen} />
+  <DrawerLayout.Screen name="Example3" component={Example3Screen} />
+</DrawerLayout.Navigator>
 }
 
 const ModalStackSceen = () => {

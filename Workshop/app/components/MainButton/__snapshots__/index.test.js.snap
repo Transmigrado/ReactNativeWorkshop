@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test snapshot renders correctly for styleButton is STYLE_1 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 4,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 32,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#01305E",
+          "fontSize": 11,
+          "fontWeight": "bold",
+        },
+        Object {},
+      ]
+    }
+  >
+    Hola Mundo
+  </Text>
+</View>
+`;
+
+exports[`test snapshot renders correctly for styleButton is STYLE_2 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#3F5498",
+      "borderColor": "#6F7EB1",
+      "borderRadius": 4,
+      "borderWidth": 1,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 32,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#01305E",
+          "fontSize": 11,
+          "fontWeight": "bold",
+        },
+        Object {
+          "color": "#FFFFFF",
+        },
+      ]
+    }
+  >
+    Hola Mundo
+  </Text>
+</View>
+`;
+
+exports[`test snapshot renders correctly for styleButton is undefined 1`] = `
+<View
+  accessible={true}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 4,
+      "justifyContent": "center",
+      "opacity": 1,
+      "paddingHorizontal": 32,
+      "paddingVertical": 15,
+    }
+  }
+>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#01305E",
+          "fontSize": 11,
+          "fontWeight": "bold",
+        },
+        Object {},
+      ]
+    }
+  >
+    Hola Mundo
+  </Text>
+</View>
+`;

@@ -79,7 +79,7 @@ const ListScreen = ({ navigation }) => {
     const RenderItem = ({item, index})  => {
         return (
          <TouchableOpacity style={styles.item} onPress={() => {
-            navigation.navigate('DetailList', item)
+            navigation.openDrawer()
          }}>
              <Text>{item.title}</Text>
          </TouchableOpacity>
@@ -89,6 +89,12 @@ const ListScreen = ({ navigation }) => {
     return (
         <View style={{flex: 1}}>
             <View style={{height: 80, padding: 10}}>
+
+                <TouchableOpacity  onPress={() => {
+            navigation.openDrawer()
+         }}>
+                    <Text>Abrir</Text>
+                </TouchableOpacity>
             <FlatList
                 data={DATA}
                 renderItem={SquareItem}

@@ -1,5 +1,6 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
+import PropTypes from 'prop-types'
 
 const MainButton = ({ styleButton = 'STYLE_1', label}) => {
 
@@ -24,6 +25,11 @@ const MainButton = ({ styleButton = 'STYLE_1', label}) => {
             <Text style={[styles.label, getStyleLabel()]}>{label}</Text>
         </TouchableOpacity>
     )
+}
+
+MainButton.propTypes = {
+    styleButton: PropTypes.oneOf(['STYLE_1', 'STYLE_2']),
+    label: PropTypes.string
 }
 
 const styles = StyleSheet.create({

@@ -55,7 +55,7 @@ const HomeScreen = () => {
               </View>
               <View style={styles.containerButtons}>
                 <MainButton label="Policy Detail" styleButton="STYLE_2" />
-                <MainButton label="Make a payment" />
+                <MainButton label="Make Payment" styleButton="STYLE_1" />
               </View>
             
           </View>
