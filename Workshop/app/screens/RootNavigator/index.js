@@ -12,8 +12,9 @@ import Modal2Screen from '../Modal2Screen'
 import ListScreen from '../ListScreen'
 import ListDetailScreen from '../ListDetailScreen'
 import HomeScreen from '../HomeScreen'
-
-
+import ReduxScreen from '../ReduxScreen'
+import ShowNumberScreen from '../ShowNumberScreen'
+import ItunesSearchScreen from '../ItunesSearchScreen'
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
@@ -23,11 +24,10 @@ const Tabbar = createBottomTabNavigator()
 const DrawerLayout = createDrawerNavigator()
 
 const HomeStackScreen = () => {
-  return <DrawerLayout.Navigator>
-  <DrawerLayout.Screen name="HomeList" component={HomeScreen} />
-  <DrawerLayout.Screen name="Example2" component={Example2Screen} />
-  <DrawerLayout.Screen name="Example3" component={Example3Screen} />
-</DrawerLayout.Navigator>
+  return <Tabbar.Navigator>
+  <Tabbar.Screen name="ItunesSearch" component={ItunesSearchScreen} />
+  <Tabbar.Screen name="Number" component={ShowNumberScreen} />
+</Tabbar.Navigator>
 }
 
 const ModalStackSceen = () => {

@@ -11,10 +11,18 @@ import HeaderNumber from '../../components/HeaderNumber'
 import MainButton from '../../components/MainButton'
 
 
+const fetchItunes = () => {
+  return fetch('https://itunes.apple.com/search?term=coldplay')
+            .then(response => response.json())
+            .then(response => {
+                console.log(response.results[0])
+            })
+}
+
 const HomeScreen = () => {
 
   useEffect(() => {
-    console.log('HOLA')
+    fetchItunes()
   }, [])
 
   return (
