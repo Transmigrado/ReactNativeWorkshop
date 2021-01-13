@@ -1,11 +1,10 @@
 import { fetchItunes } from '../api/itunes'
 
 export const fetchSearchItunesThunk = searchText => {
-    return (dispatch, getState) => { 
-        const state = getState()
- 
+    return (dispatch) => { 
+   
         dispatch({ type: 'FETCH_START' })
-        fetchItunes(searchText)
+        return fetchItunes(searchText)
             .then(response => {
                 dispatch({ type:'FETCH_SUCCESS', response: response.results})
             })
@@ -14,3 +13,4 @@ export const fetchSearchItunesThunk = searchText => {
             })
     }
 }
+

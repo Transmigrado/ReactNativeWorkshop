@@ -24,9 +24,9 @@ const ReduxScreen = ({ searchItunes, tracks, isLoading }) => {
                <TextInput onChangeText={onChangeText} placeholder="Escribe tu canción" />
            </View>
            <FlatList 
-           style={{flex: 1}}
-            data={tracks}
-            renderItem={RenderItem}
+                style={{flex: 1}}
+                data={tracks}
+                renderItem={RenderItem}
            />
         </SafeAreaView>
     )

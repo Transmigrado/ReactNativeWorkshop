@@ -15,4 +15,3 @@ function* searchItunes(action){
 export function* searchItunesAction(){
     yield takeLatest('FETCH_ITUNES', searchItunes)
 }
-
