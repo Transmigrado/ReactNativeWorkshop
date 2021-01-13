@@ -1,16 +1,12 @@
 import { connect } from 'react-redux'
 import Component from './Component'
+import { fetchSearchItunesThunk } from '../../thunk/itunes'
 
 const mapStateToProps = state => ({
   tracks: state.itunes.tracks,
   isLoading: state.itunes.isLoading
 })
 
-
-const fetchItunes = term => {
-    return fetch(`https://itunes.apple.com/search?term=${term}`)
-                .then(response => response.json())
-}
 
 /*
 const mapDispatchToProps = { 
@@ -19,18 +15,7 @@ const mapDispatchToProps = {
 */
 
 const mapDispatchToProps = { 
-    searchItunes: searchText => {
-        return (dispatch) => { 
-            dispatch({ type: 'FETCH_START' })
-            fetchItunes(searchText)
-                .then(response => {
-                    dispatch({ type:'FETCH_SUCCESS', response: response.results})
-                })
-                .catch(error => {
-                    dispatch({ type:'FETCH_ERROR', error })
-                })
-        }
-    }
+    searchItunes: fetchSearchItunesThunk
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Component)

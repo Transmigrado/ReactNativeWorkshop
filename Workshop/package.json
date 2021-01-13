@@ -36,6 +36,7 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
+    "jest-fetch-mock": "^3.0.3",
     "metro-react-native-babel-preset": "^0.59.0",
     "react-dom": "^17.0.1",
     "react-test-renderer": "16.13.1",
@@ -43,6 +44,10 @@
   },
   "jest": {
     "preset": "react-native",
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
     "collectCoverageFrom": [
       "app/**/*.js"
     ],

@@ -77,3 +77,39 @@ const reducer = (state = INITIAL_STATE, action = {}) => {
 }
 
 ```
+
+
+## Pruebas Unitarias
+
+
+- [Documentación de Jest](https://jestjs.io/docs/en/getting-started)
+- [Jest Fetch mock](https://www.npmjs.com/package/jest-fetch-mock)
+- [Documentación Enzyme](https://enzymejs.github.io/enzyme/)
+
+La configuración de jest se encuentra en **package.json**
+
+```javascript
+"jest":{
+    "preset": "react-native",
+    "automock": false,
+    "setupFiles": [
+      "./setupJest.js"
+    ],
+    "collectCoverageFrom": [
+      "app/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 40,
+        "statements": 40,
+        "braches": 40
+      }
+    }
+}
+```
+
+Para poder emular una llamada fetch usamos la libreria **jest-fetch-mock**
+
+```javascript
+npm install --save-dev jest-fetch-mock
+```

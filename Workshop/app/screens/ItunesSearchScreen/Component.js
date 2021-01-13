@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
 import { SafeAreaView, StyleSheet, Text, FlatList, View, Image, TextInput } from 'react-native'
 
-
 const ReduxScreen = ({ searchItunes, tracks, isLoading }) => {
-
 
     const onChangeText = (text) => {
         searchItunes(text)
@@ -14,10 +12,9 @@ const ReduxScreen = ({ searchItunes, tracks, isLoading }) => {
             <View style={styles.item}>
                 <Image source={{uri: item.artworkUrl60}} style={{width:80, height:80}} />
                 <View>
-                <Text style={styles.itemLabel}>{item.trackName}</Text>
-                <Text style={styles.itemSubLabel}>{item.artistName}</Text>
+                    <Text style={styles.itemLabel}>{item.trackName}</Text>
+                    <Text style={styles.itemSubLabel}>{item.artistName}</Text>
                 </View>
-                
             </View>
         )
     }
