@@ -1,55 +1,11 @@
-import React from 'react'
-import { View, FlatList, Text, StyleSheet, Image, TouchableOpacity } from 'react-native'
+import React, { useEffect } from 'react'
+import { View, FlatList, Text, StyleSheet, Image, TouchableOpacity, NativeModules } from 'react-native'
+const { RCTCalendarModule } = NativeModules
 
 const DATA = [
     {
         title:'Item 1',
         description: ' 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-    },
-    {
-        title:'Item 2',
-        description: ' 2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: ' 3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
-    },
-    {
-        title:'Item 3',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et felis iaculis, eleifend est nec, volutpat lacus. Praesent quis faucibus orci. Mauris aliquam scelerisque ante, at eleifend erat dictum eu. In diam justo, pretium eget viverra nec, convallis quis turpis. Aliquam ipsum nulla, suscipit dignissim malesuada vel, sagittis a felis. Aenean non lectus auctor, egestas diam eget, faucibus enim. Integer tristique lectus eget sem hendrerit volutpat.'
-   
     }
 ]
 
@@ -75,6 +31,10 @@ const RenderItem = ({item, index})  => {
 
 const ListScreen = ({ navigation }) => {
 
+    useEffect(() => {
+        RCTCalendarModule.helloWorld("Hola")
+        console.log('CALENDAR', RCTCalendarModule)
+    }, [])
    
     const RenderItem = ({item, index})  => {
         return (

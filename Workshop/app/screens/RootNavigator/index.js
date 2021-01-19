@@ -55,8 +55,9 @@ const RootNavigator = () => {
   return (
     <NavigationContainer >
       <MainStack.Navigator  mode="modal">
+      <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />
         <MainStack.Screen options={{headerShown: false}} name="Home" component={HomeStackScreen} />
-        <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />
+        
         <MainStack.Screen options={{headerShown: false}} name="Modal" component={ModalStackSceen} />
       </MainStack.Navigator>
     </NavigationContainer>
