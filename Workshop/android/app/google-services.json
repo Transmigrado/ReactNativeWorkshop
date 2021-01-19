@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44052780670",
+    "project_id": "workshop-react-native-5a795",
+    "storage_bucket": "workshop-react-native-5a795.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44052780670:android:bb966be7f31b650459ea2f",
+        "android_client_info": {
+          "package_name": "com.workshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44052780670-db12rhbrn1g61021kdmjn6hdv4begrlb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbiDml0I98Bq-xXyedLOvnbhRn25IEIHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44052780670-db12rhbrn1g61021kdmjn6hdv4begrlb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

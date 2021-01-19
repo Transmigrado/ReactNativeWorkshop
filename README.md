@@ -113,3 +113,9 @@ Para poder emular una llamada fetch usamos la libreria **jest-fetch-mock**
 ```javascript
 npm install --save-dev jest-fetch-mock
 ```
+
+## Lottie
+
+Animaciones para nuestra aplicacion
+
+[Animaciones] (https://lottiefiles.com/)

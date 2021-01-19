@@ -6,6 +6,7 @@ platform :ios, '10.0'
 target 'Workshop' do
   config = use_native_modules!
 
+  pod 'RNFBAuth', :path => '../node_modules/@react-native-firebase/auth'
   use_react_native!(:path => config["reactNativePath"])
 
   target 'WorkshopTests' do

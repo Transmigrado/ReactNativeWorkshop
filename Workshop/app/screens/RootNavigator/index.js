@@ -11,10 +11,12 @@ import ModalScreen from '../ModalScreen'
 import Modal2Screen from '../Modal2Screen'
 import ListScreen from '../ListScreen'
 import ListDetailScreen from '../ListDetailScreen'
-import HomeScreen from '../HomeScreen'
 import ReduxScreen from '../ReduxScreen'
 import ShowNumberScreen from '../ShowNumberScreen'
 import ItunesSearchScreen from '../ItunesSearchScreen'
+import DemoComponentScreen from '../DemoComponentScreen'
+import HomeScreen from '../Twitter/HomeScreen'
+import PostScreen from '../Twitter/PostScreen' 
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
@@ -24,10 +26,14 @@ const Tabbar = createBottomTabNavigator()
 const DrawerLayout = createDrawerNavigator()
 
 const HomeStackScreen = () => {
-  return <Tabbar.Navigator>
-  <Tabbar.Screen name="ItunesSearch" component={ItunesSearchScreen} />
-  <Tabbar.Screen name="Number" component={ShowNumberScreen} />
-</Tabbar.Navigator>
+  return (
+    <Tabbar.Navigator>
+      <Tabbar.Screen name="Home" component={HomeScreen} />
+       <Tabbar.Screen name="Post" component={PostScreen} />
+      
+     
+    </Tabbar.Navigator>
+  )
 }
 
 const ModalStackSceen = () => {
