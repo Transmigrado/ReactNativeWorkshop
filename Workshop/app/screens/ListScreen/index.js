@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { View, FlatList, Text, StyleSheet, Image, TouchableOpacity, NativeModules } from 'react-native'
-const { CalendarManager } = NativeModules
-import MapView from '../../components/MapView'
+const { MyAlertManager } = NativeModules
+
 
 const DATA = [
     {
@@ -40,7 +40,7 @@ const ListScreen = ({ navigation }) => {
         return (
          <TouchableOpacity style={styles.item} onPress={() => {
             //navigation.openDrawer()
-            CalendarManager.helloWorld('Workshop', 'Mensaje')
+            MyAlertManager.helloWorld('Workshop', 'Mensaje')
          }}>
              <Text>{item.title}</Text>
          </TouchableOpacity>
@@ -49,7 +49,7 @@ const ListScreen = ({ navigation }) => {
 
     return (
         <View style={{flex: 1}}>
-            <MapView style={{ width : '100%', height: 300}} />
+           
             <View style={{height: 80, padding: 10}}>
 
                 <TouchableOpacity  onPress={() => {

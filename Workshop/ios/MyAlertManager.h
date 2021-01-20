@@ -6,5 +6,5 @@
 //
 
 #import <React/RCTBridgeModule.h>
-@interface CalendarManager : NSObject <RCTBridgeModule>
+@interface MyAlertManager : NSObject <RCTBridgeModule>
 @end

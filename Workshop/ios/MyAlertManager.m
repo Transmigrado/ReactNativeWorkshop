@@ -6,10 +6,10 @@
 //
 
 #import "React/RCTBridgeModule.h"
-#import "CalendarManager.h"
+#import "MyAlertManager.h"
 #import <UIKit/UIKit.h>
 
-@implementation CalendarManager
+@implementation MyAlertManager
 
 RCT_EXPORT_MODULE();
 
