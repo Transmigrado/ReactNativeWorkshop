@@ -36,6 +36,7 @@ it('sumar todas las propiedades, fat, protein y carbs', () => {
     const item = {
         fat: 600,
         protein: 500,
+        carbs: 1200
     }
 
     expect(sumProp(item)).toEqual(2300)
