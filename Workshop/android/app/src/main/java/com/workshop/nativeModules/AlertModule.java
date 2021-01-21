@@ -32,6 +32,12 @@ public class AlertModule extends ReactContextBaseJavaModule {
                         dialog.dismiss();
                     }
                 });
+        alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "Cancelar",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                });
         alertDialog.show();
 
     }

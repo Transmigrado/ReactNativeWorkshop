@@ -17,6 +17,8 @@ import ItunesSearchScreen from '../ItunesSearchScreen'
 import DemoComponentScreen from '../DemoComponentScreen'
 import HomeScreen from '../Twitter/HomeScreen'
 import PostScreen from '../Twitter/PostScreen' 
+import AnimationScreen from '../AnimationScreen'
+import GraphScreen from '../GraphScreen'
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
@@ -30,8 +32,6 @@ const HomeStackScreen = () => {
     <Tabbar.Navigator>
       <Tabbar.Screen name="Home" component={HomeScreen} />
        <Tabbar.Screen name="Post" component={PostScreen} />
-      
-     
     </Tabbar.Navigator>
   )
 }
@@ -55,9 +55,10 @@ const RootNavigator = () => {
   return (
     <NavigationContainer >
       <MainStack.Navigator  mode="modal">
-      <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />
+        <MainStack.Screen name="graph" component={GraphScreen} />
+        <MainStack.Screen name="anim" component={AnimationScreen} />
+        <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />
         <MainStack.Screen options={{headerShown: false}} name="Home" component={HomeStackScreen} />
-        
         <MainStack.Screen options={{headerShown: false}} name="Modal" component={ModalStackSceen} />
       </MainStack.Navigator>
     </NavigationContainer>

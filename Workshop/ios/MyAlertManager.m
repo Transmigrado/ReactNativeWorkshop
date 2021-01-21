@@ -13,11 +13,11 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(helloWorld:(NSString *) txt andMessage:(NSString *) message)
+RCT_EXPORT_METHOD(helloWorld:(NSString *) title andMessage:(NSString *) message)
 {
   
   dispatch_async(dispatch_get_main_queue(), ^{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:txt
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
                                                         message: message
                                                         delegate:self
                                                         cancelButtonTitle:@"OK"

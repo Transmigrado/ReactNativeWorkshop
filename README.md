@@ -1,5 +1,8 @@
 # ReactNativeWorkshop
 
+
+[![Build Status](https://app.bitrise.io/app/fdb4d46cf0c68e07/status.svg?token=bwp89sBhlwNujcJ7hyRh4Q&branch=main)](https://app.bitrise.io/app/fdb4d46cf0c68e07)
+
 ## Redux
 
 Instalar Redux
