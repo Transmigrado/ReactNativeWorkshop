@@ -125,6 +125,6 @@ Animaciones para nuestra aplicacion
 
 ### Libreria ADMOB 
 
-https://www.npmjs.com/package/prop-types
+https://www.npmjs.com/package/react-native-ad-manager
 
 Pantalla de ejemplo en screens/AdMobScreen
