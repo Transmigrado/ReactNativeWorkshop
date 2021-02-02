@@ -19,6 +19,9 @@ import HomeScreen from '../Twitter/HomeScreen'
 import PostScreen from '../Twitter/PostScreen' 
 import AnimationScreen from '../AnimationScreen'
 import GraphScreen from '../GraphScreen'
+import LineGraphScreen from '../LineGraphScreen'
+import ListDBScreen from '../ListDBScreen'
+import AdMobScreen from '../AdMobScreen'
 
 const HomeStack = createStackNavigator()
 const MainStack = createStackNavigator()
@@ -55,6 +58,9 @@ const RootNavigator = () => {
   return (
     <NavigationContainer >
       <MainStack.Navigator  mode="modal">
+        <MainStack.Screen name="adMob" component={AdMobScreen} />
+        <MainStack.Screen name="ListDBScreen" component={ListDBScreen} />
+        <MainStack.Screen name="LineGraph" component={LineGraphScreen} />
         <MainStack.Screen name="graph" component={GraphScreen} />
         <MainStack.Screen name="anim" component={AnimationScreen} />
         <MainStack.Screen  name="List" options={{title:'Mi Lista', headerShown: false}} component={ListStackSceen} />

@@ -7,11 +7,7 @@ const mapStateToProps = state => ({
   tracks: getTracks(state),
   isLoading: getIsLoading(state)
 })
-/*
-const mapDispatchToProps = { 
-    searchItunes: searchText => ({ type: 'FETCH_ITUNES', searchText}),
-}
-*/
+
 const mapDispatchToProps = { 
     searchItunes: fetchSearchItunesThunk
 }

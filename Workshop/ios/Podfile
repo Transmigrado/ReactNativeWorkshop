@@ -9,6 +9,8 @@ target 'Workshop' do
   pod 'RNFBAuth', :path => '../node_modules/@react-native-firebase/auth'
   use_react_native!(:path => config["reactNativePath"])
 
+ # pod 'Google-Mobile-Ads-SDK'
+  
   target 'WorkshopTests' do
     inherit! :complete
     # Pods for testing

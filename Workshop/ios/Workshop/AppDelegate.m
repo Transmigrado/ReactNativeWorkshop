@@ -14,6 +14,7 @@
 
 #import <FirebaseCore/FirebaseCore.h>
 #import <Firebase.h>
+@import GoogleMobileAds;
 
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
@@ -34,7 +35,7 @@ static void InitializeFlipper(UIApplication *application) {
   InitializeFlipper(application);
 #endif
   
-  
+  [[GADMobileAds sharedInstance] startWithCompletionHandler:nil];
   
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge

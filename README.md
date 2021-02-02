@@ -122,3 +122,9 @@ npm install --save-dev jest-fetch-mock
 Animaciones para nuestra aplicacion
 
 [Animaciones] (https://lottiefiles.com/)
+
+### Libreria ADMOB 
+
+https://www.npmjs.com/package/prop-types
+
+Pantalla de ejemplo en screens/AdMobScreen
